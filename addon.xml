@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.moonlight" name="Moonlight" version="1.0.0" provider-name="clement-dufour">
+	<requires>
+		<import addon="xbmc.python" version="3.0.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="resources/lib/runner.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<language></language>
+		<summary lang="en">Start Moonlight from Kodi</summary>
+		<description lang="en">Start the moonlight systemd service from Kodi.</description>
+		<platform>linux</platform>
+		<source>https://github.com/clement-dufour/script.module.moonlight</source>
+	</extension>
+</addon>

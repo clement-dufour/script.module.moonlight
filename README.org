@@ -1,0 +1,6 @@
+#+title: script.module.moonlight
+
+Start Moonlight from Kodi
+
+* Installation
+Clone the project to Kodi addons folder =$KODI_DATA/addons/=.
