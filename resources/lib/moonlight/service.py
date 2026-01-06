@@ -11,6 +11,6 @@ def log(text):
     return
 
 def run():
-    args = ['/usr/bin/systemctl', 'start', '--no-block', 'moonlight.service']
-    cmd = subprocess.run(args, check=True)
+    args = ['/usr/bin/systemctl', 'start', '--no-ask-password', '--no-block',
+            'moonlight.service']
     return
