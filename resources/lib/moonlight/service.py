@@ -10,7 +10,26 @@ def log(text):
     xbmc.log(msg=message, level=xbmc.LOGDEBUG)
     return
 
+def notify(text):
+    header = f'{ADDON_NAME}'
+    message = text
+    xbmc.executebuiltin(f'Notification({header}, {message})')
+    return
+
 def run():
     args = ['/usr/bin/systemctl', 'start', '--no-ask-password', '--no-block',
             'moonlight.service']
+
+    try:
+        cmd = subprocess.run(args, check=True)
+
+        if cmd:
+            notify('Moonlight started')
+        else:
+            log(f'Command {args[0]} encountered an error.')
+
+    except FileNotFoundError:
+        log(f'Command {args[0]} not found.')
+        return
+
     return
